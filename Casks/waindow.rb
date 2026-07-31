@@ -8,7 +8,7 @@ cask "waindow" do
   desc "Arrange windows with memos, capture, and focus tools"
   homepage "https://www.waindow.app/"
 
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Waindow.app"
 

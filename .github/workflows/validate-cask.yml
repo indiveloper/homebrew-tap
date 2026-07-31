@@ -12,16 +12,17 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Check out tap
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Audit and style
         run: |
-          brew audit --new --cask ./Casks/waindow.rb
-          brew style --cask ./Casks/waindow.rb
+          brew tap indiveloper/tap "$GITHUB_WORKSPACE"
+          brew audit --new --cask indiveloper/tap/waindow
+          brew style --cask indiveloper/tap/waindow
 
       - name: Install and inspect
         run: |
-          brew install --cask ./Casks/waindow.rb
+          brew install --cask indiveloper/tap/waindow
           test -d /Applications/Waindow.app
           test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' /Applications/Waindow.app/Contents/Info.plist)" = "1.4.1"
           test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' /Applications/Waindow.app/Contents/Info.plist)" = "com.waindow.Waindow"

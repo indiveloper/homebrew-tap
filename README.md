@@ -3,6 +3,9 @@
 This tap installs the current public Waindow binary. It does not contain the
 Waindow application source code.
 
+This is a third-party tap maintained by Waindow, not an official Homebrew cask
+or a repository endorsed or supported by Homebrew.
+
 ## Install
 
 ```sh

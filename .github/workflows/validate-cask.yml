@@ -1,0 +1,35 @@
+name: Validate cask
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: macos-14
+    timeout-minutes: 15
+    steps:
+      - name: Check out tap
+        uses: actions/checkout@v4
+
+      - name: Audit and style
+        run: |
+          brew audit --new --cask ./Casks/waindow.rb
+          brew style --cask ./Casks/waindow.rb
+
+      - name: Install and inspect
+        run: |
+          brew install --cask ./Casks/waindow.rb
+          test -d /Applications/Waindow.app
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' /Applications/Waindow.app/Contents/Info.plist)" = "1.4.1"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' /Applications/Waindow.app/Contents/Info.plist)" = "com.waindow.Waindow"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :LSMinimumSystemVersion' /Applications/Waindow.app/Contents/Info.plist)" = "13.1"
+          codesign --verify --deep --strict --verbose=2 /Applications/Waindow.app
+
+      - name: Uninstall without touching user data
+        if: always()
+        run: |
+          brew uninstall --cask waindow || true
+          test ! -e /Applications/Waindow.app

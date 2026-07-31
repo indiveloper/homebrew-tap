@@ -1,6 +1,6 @@
 cask "waindow" do
-  version "1.4.1"
-  sha256 "d64cbed7efce5bf6b2ba111d777366df3479290184a17217dcf9e4cc589600e0"
+  version "1.4.2"
+  sha256 "8f5ee6417154ed44019308b7bab13154476edc60b5284280b1b248d91f13e297"
 
   url "https://github.com/indiveloper/waindow-releases/releases/download/v#{version}/Waindow-#{version}.zip",
       verified: "github.com/indiveloper/waindow-releases/"
@@ -15,7 +15,8 @@ cask "waindow" do
   caveats <<~EOS
     Waindow requires macOS 13.1 or later.
 
-    The current direct build is ad-hoc signed, not Developer ID notarized.
+    The current direct build uses a stable local signing identity and is not
+    Developer ID notarized.
     Homebrew preserves macOS quarantine. On first launch, macOS may require:
     System Settings > Privacy & Security > Open Anyway.
 

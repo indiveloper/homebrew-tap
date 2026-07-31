@@ -10,6 +10,8 @@ jobs:
   validate:
     runs-on: macos-14
     timeout-minutes: 15
+    env:
+      HOMEBREW_GITHUB_API_TOKEN: ${{ github.token }}
     steps:
       - name: Check out tap
         uses: actions/checkout@v5

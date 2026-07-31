@@ -20,7 +20,7 @@ jobs:
         run: |
           brew tap indiveloper/tap "$GITHUB_WORKSPACE"
           brew trust indiveloper/tap
-          brew audit --new --cask indiveloper/tap/waindow
+          brew audit --cask indiveloper/tap/waindow
           brew style --cask indiveloper/tap/waindow
 
       - name: Install and inspect

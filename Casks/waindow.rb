@@ -5,7 +5,7 @@ cask "waindow" do
   url "https://github.com/indiveloper/waindow-releases/releases/download/v#{version}/Waindow-#{version}.zip",
       verified: "github.com/indiveloper/waindow-releases/"
   name "Waindow"
-  desc "Arrange workspaces, present, record demos, and keep local Mac utilities together"
+  desc "Arrange workspaces, present, record demos, and keep local utilities together"
   homepage "https://www.waindow.app/"
 
   depends_on macos: :ventura

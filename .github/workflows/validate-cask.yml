@@ -27,7 +27,7 @@ jobs:
         run: |
           brew install --cask indiveloper/tap/waindow
           test -d /Applications/Waindow.app
-          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' /Applications/Waindow.app/Contents/Info.plist)" = "1.4.2"
+          test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' /Applications/Waindow.app/Contents/Info.plist)" = "1.4.3"
           test "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' /Applications/Waindow.app/Contents/Info.plist)" = "com.waindow.Waindow"
           test "$(/usr/libexec/PlistBuddy -c 'Print :LSMinimumSystemVersion' /Applications/Waindow.app/Contents/Info.plist)" = "13.1"
           codesign --verify --deep --strict --verbose=2 /Applications/Waindow.app

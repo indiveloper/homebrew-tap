@@ -15,7 +15,8 @@ brew install --cask indiveloper/tap/waindow
 Waindow is free, requires no account or license key, and supports macOS 13.1 or
 later on Apple Silicon and Intel Macs.
 
-The current direct build is ad-hoc signed rather than Developer ID notarized.
+The current direct build uses a stable local signing identity rather than a
+Developer ID certificate and is not notarized.
 Homebrew keeps the download quarantined, so the first launch may require
 **System Settings → Privacy & Security → Open Anyway**. Do not disable
 Gatekeeper.

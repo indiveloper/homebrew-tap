@@ -1,11 +1,11 @@
 cask "waindow" do
-  version "1.4.3"
-  sha256 "a12f466122e6605c9a9b6001085338390215b4c9749b39f51b2fee74ea0c8c4b"
+  version "1.5.0"
+  sha256 "b84688fa98951bd1c117122c682b7c81f25c0a9b0e40ca2c9a993ae05002d612"
 
   url "https://github.com/indiveloper/waindow-releases/releases/download/v#{version}/Waindow-#{version}.zip",
       verified: "github.com/indiveloper/waindow-releases/"
   name "Waindow"
-  desc "Arrange windows with memos, capture, and focus tools"
+  desc "Save window workspaces with memos, capture, and focus tools"
   homepage "https://www.waindow.app/"
 
   depends_on macos: :ventura

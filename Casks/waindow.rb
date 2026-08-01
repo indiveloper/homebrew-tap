@@ -1,6 +1,6 @@
 cask "waindow" do
-  version "1.7.0"
-  sha256 "e6131aa87b1a352dbbf105e73b6f8d452c6aa461820455a2ecdfe4225c643ad8"
+  version "1.7.1"
+  sha256 "cb5b9ced55b7b94ee72de039ef9b7239468790fe3b5b917aa2e531345ccc072c"
 
   url "https://github.com/indiveloper/waindow-releases/releases/download/v#{version}/Waindow-#{version}.zip",
       verified: "github.com/indiveloper/waindow-releases/"

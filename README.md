@@ -12,7 +12,8 @@ or a repository endorsed or supported by Homebrew.
 brew install --cask indiveloper/tap/waindow
 ```
 
-Waindow is free, requires no account or license key, and supports macOS 13.1 or
+Waindow is currently free to use (transitioning to a paid app on December 1,
+2026), requires no account or product key in 1.11.0, and supports macOS 13.1 or
 later on Apple Silicon and Intel Macs.
 
 The current direct build uses a stable local signing identity rather than a
